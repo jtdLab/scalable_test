@@ -1,3 +1,3 @@
 library scalable_test;
 
-export '';
+export 'src/presentation/presentation_test.dart';
