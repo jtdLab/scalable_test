@@ -26,19 +26,30 @@ extension WidgetTesterX on WidgetTester {
     );
   }
 
-  // TODO fix generics
+  // TODO fix generics + assert at least one provider
   Future<void> pumpBlocListener<T extends StateStreamableSource>(
     BlocListener listener, {
-    required T listenTo,
-  }) {
-    return pumpWidget(
-      BlocProvider(
-        create: (_) => listenTo,
-        child: MultiBlocListener(
-          listeners: [listener],
-          child: const MockWidget(),
-        ),
+    required List<BlocProvider> providers,
+    StackRouter? router,
+  }) async {
+    final multiBlocProvider = MultiBlocProvider(
+      providers: providers,
+      child: MultiBlocListener(
+        listeners: [listener],
+        child: const MockWidget(),
       ),
     );
+
+    if (router == null) {
+      pumpWidget(multiBlocProvider);
+    } else {
+      pumpWidget(
+        StackRouterScope(
+          controller: router,
+          stateHash: 0,
+          child: multiBlocProvider,
+        ),
+      );
+    }
   }
 }
