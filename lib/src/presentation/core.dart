@@ -12,6 +12,27 @@ class MockWidget extends StatelessWidget {
   }
 }
 
+// TODO doc
+class RouterProvider extends StatelessWidget {
+  final StackRouter router;
+  final Widget child;
+
+  const RouterProvider({
+    Key? key,
+    required this.router,
+    required this.child,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return StackRouterScope(
+      controller: router,
+      stateHash: 0,
+      child: child,
+    );
+  }
+}
+
 // TODO better doc
 extension WidgetTesterX on WidgetTester {
   // TODO fix generics
