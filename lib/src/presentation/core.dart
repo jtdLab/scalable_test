@@ -8,7 +8,7 @@ final iosDevices = [
   const Device(size: Size(428, 926), name: 'iPhone 13 Pro Max'),
 ];
 
-// TODO
+// TODO search 4 popular android device sizes
 final androidDevices = [
   const Device(size: Size(320, 568), name: 'iPhone SE 1st'),
   const Device(size: Size(375, 667), name: 'iPhone 8'),
