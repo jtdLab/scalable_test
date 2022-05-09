@@ -1,5 +1,21 @@
 part of 'presentation_test.dart';
 
+// better doc
+final iosDevices = [
+  const Device(size: Size(320, 568), name: 'iPhone SE 1st'),
+  const Device(size: Size(375, 667), name: 'iPhone 8'),
+  const Device(size: Size(414, 896), name: 'iPhone 11'),
+  const Device(size: Size(428, 926), name: 'iPhone 13 Pro Max'),
+];
+
+// TODO
+final androidDevices = [
+  const Device(size: Size(320, 568), name: 'iPhone SE 1st'),
+  const Device(size: Size(375, 667), name: 'iPhone 8'),
+  const Device(size: Size(414, 896), name: 'iPhone 11'),
+  const Device(size: Size(428, 926), name: 'iPhone 13 Pro Max'),
+];
+
 // TODO better doc
 /// This should be used in tests to mock out subtrees with complex dependencies
 /// when the specific test case does not need the subtree.
