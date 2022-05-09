@@ -5,9 +5,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:golden_toolkit/golden_toolkit.dart';
 
 export 'package:bloc_test/bloc_test.dart';
-export 'package:flutter_test/flutter_test.dart';
 export 'package:golden_toolkit/golden_toolkit.dart';
-export 'package:mocktail/mocktail.dart';
+
+export '../core/core_test.dart';
 
 part 'core.dart';
 part 'flow_test.dart';
